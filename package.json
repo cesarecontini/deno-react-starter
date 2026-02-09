@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install-deno": "cd deno && deno install",
     "dev": "pnpm --filter web dev",
     "deno-dev": "docker compose up -d && cd deno && deno task dev",
     "test": "echo \"Error: no test specified\" && exit 1",
