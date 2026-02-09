@@ -1,0 +1,24 @@
+{
+  "name": "deno-react-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "deno-dev": "docker compose up -d && cd deno && deno task dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "docker compose up -d && cd deno && deno task generate",
+    "migrate": "docker compose up -d && cd deno && deno task migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.10.0",
+  "dependencies": {
+    "drizzle-orm": "^0.45.1",
+    "postgres": "^3.4.8"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.8"
+  }
+}
