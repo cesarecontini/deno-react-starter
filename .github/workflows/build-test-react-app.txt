@@ -33,4 +33,5 @@ jobs:
         run: pnpm install
 
       - name: Build React App
-        run: pnpm --filter web run build-react-app-on-deno-deploy:preview
+        run: |
+          pnpm --filter web run build-react-app-on-deno-deploy:preview
