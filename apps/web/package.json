@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && echo DENO_ENV=$DENO_ENV",
+    "build-react-app-on-deno-deploy": "tsc -b && vite build --mode $DENO_ENV && echo DENO_ENV=$DENO_ENV",
     "lint": "eslint .",
     "preview": "vite preview"
   },
