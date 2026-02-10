@@ -1,0 +1,27 @@
+# name: Database Migration (Test Branch)
+
+# on:
+#   push:
+#     branches:
+#       - test
+
+# jobs:
+#   migrate:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+
+#       - name: Setup Deno
+#         uses: denoland/setup-deno@v2
+#         with:
+#           deno-version: v2.x
+
+#       - name: Run Migration
+#         env:
+#           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+#         run: |
+#           cd deno
+#           deno install
+#           deno task migrate
