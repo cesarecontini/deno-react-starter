@@ -9,28 +9,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout code
-    uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-  - name: Setup pnpm
-    uses: pnpm/action-setup@v3
-    with:
-      version: 8
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
-  - name: Setup Node
-    uses: actions/setup-node@v4
-    with:
-      node-version: 20
-      cache: "pnpm"
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
 
-  - name: Setup Deno
-    uses: denoland/setup-deno@v2
-    with:
-      deno-version: v2.x
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
 
-  - name: Install dependencies
-    run: pnpm install
+      - name: Install dependencies
+        run: pnpm install
 
-  - name: Build React App
-    run: pnpm --filter web run build-react-app-on-deno-deploy:preview
+      - name: Build React App
+        run: pnpm --filter web run build-react-app-on-deno-deploy:preview
