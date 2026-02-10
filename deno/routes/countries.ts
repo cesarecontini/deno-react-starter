@@ -1,11 +1,12 @@
 import { getAllCountries } from "../db/queries.countries.ts";
-import { Hono, Context } from "hono";
+import { Context, Hono } from "hono";
+import { addCorsHeaders } from "../main.ts";
 
-const countriesRoute = new Hono()
+const countriesRoute = new Hono();
 
-countriesRoute.get('/', async (c: Context) => {
-  const countries = await getAllCountries()
-  return c.json(countries)
-})
+countriesRoute.get("/", async (c: Context) => {
+  const countries = await getAllCountries();
+  return addCorsHeaders(c.json(countries));
+});
 
-export default countriesRoute
+export default countriesRoute;
