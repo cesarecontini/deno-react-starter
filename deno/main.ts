@@ -13,9 +13,7 @@ export function addCorsHeaders(res: Response) {
 
 const app = new Hono();
 app.get("/health", (c: Context) => {
-  return addCorsHeaders(
-    c.json({ message: "ok", env: Deno.env.get("DENO_ENV") }),
-  );
+  return addCorsHeaders(c.json({ message: "ok" }));
 });
 app.route("/countries", countriesRoute);
 app.route("/api/v1", app);
