@@ -1,5 +1,6 @@
 "use client";
 
+import { conf } from "@/conf";
 import { useQuery } from "@tanstack/react-query";
 
 export const useApiGetCountries = () => {
@@ -14,7 +15,7 @@ export const useApiGetCountries = () => {
   >({
     queryKey: ["countries"],
     queryFn: () =>
-      fetch("/api/v1/countries").then(async (res) => {
+      fetch(`${conf.API_URL}/api/v1/countries`).then(async (res) => {
         const data = await res.json();
         console.log("countries-data", data);
         return data;
