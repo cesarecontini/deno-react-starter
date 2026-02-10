@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build-react-app-on-deno-deploy": "if [ \"$APP_ENV\" = \"production\" ]; then vite build --mode production; else vite build --mode preview; fi && echo APP_ENV=$APP_ENV",
+    "build-react-app-on-deno-deploy:production": "vite build --mode production",
+    "build-react-app-on-deno-deploy:preview": "vite build --mode preview",
     "build-react-app": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

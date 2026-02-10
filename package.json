@@ -11,8 +11,7 @@
     "generate": "docker compose up -d && cd deno && deno task generate",
     "migrate": "docker compose up -d && cd deno && deno task migrate",
     "migrate-on-deno-deploy": "cd deno && deno task migrate",
-    "build-react-app": "pnpm --filter web build",
-    "build-react-app-on-deno-deploy": "pnpm --filter web build-react-app-on-deno-deploy"
+    "build-react-app": "pnpm --filter web build"
   },
   "keywords": [],
   "author": "",
