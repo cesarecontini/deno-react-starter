@@ -1,4 +1,0 @@
-{
-  "tasks": {},
-  "workspace": ["apps/*", "deno"]
-}
