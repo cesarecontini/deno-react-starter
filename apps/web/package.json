@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && echo DENO_ENV=$DENO_ENV",
-    "build-react-app-on-deno-deploy": "if [ \"$DENO_DEPLOYMENT_BRANCH\" = \"main\" ]; then vite build --mode production; else vite build --mode preview; fi",
+    "build-react-app-on-deno-deploy": "if [ \"$DENO_DEPLOYMENT_BRANCH\" = \"main\" ]; then vite build --mode production; else vite build --mode preview; fi && echo DENO_DEPLOYMENT_BRANCH=$DENO_DEPLOYMENT_BRANCH",
     "build-react-app": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
