@@ -9,7 +9,8 @@
     "deno-dev": "docker compose up -d && cd deno && deno task dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate": "docker compose up -d && cd deno && deno task generate",
-    "migrate": "docker compose up -d && cd deno && deno task migrate"
+    "migrate": "docker compose up -d && cd deno && deno task migrate",
+    "migrate-on-deno-deploy": "cd deno && deno task migrate"
   },
   "keywords": [],
   "author": "",
