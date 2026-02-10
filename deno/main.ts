@@ -1,15 +1,14 @@
-import { Hono, Context } from 'hono'
-import countriesRoute from './routes/countries.ts'
+import { Context, Hono } from "hono";
+import countriesRoute from "./routes/countries.ts";
 
-const app = new Hono()
+const app = new Hono();
 
-app.get('/health', (c: Context) => {
-  return c.json({ message: 'ok' })
-})
+app.get("/health", (c: Context) => {
+  return c.json({ message: "ok" });
+});
 
-app.route('/countries', countriesRoute)
+app.route("/countries", countriesRoute);
 
-// serve from /api/v1
-app.route('/api/v1', app)
+app.route("/api/v1", app);
 
-Deno.serve(app.fetch)
+Deno.serve(app.fetch);
