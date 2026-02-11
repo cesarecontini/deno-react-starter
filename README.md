@@ -75,6 +75,13 @@ cd apps/web
 pnpm dlx shadcn@latest add <component-name>
 ```
 
+For live deployments on Deno Deploy, please set the following environment
+variables:
+
+- `VITE_API_URL_PROD` (set it with production Deno Deploy URL)
+- `VITE_API_URL_TEST` (set it with test branch deployment URL, it should contain
+  a `--test` string in the URL)
+
 ## Running the Application
 
 To start the frontend development server:
