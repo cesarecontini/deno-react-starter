@@ -1,0 +1,1 @@
+ALTER TABLE "tools" ADD COLUMN "is_great_country" boolean DEFAULT false NOT NULL;

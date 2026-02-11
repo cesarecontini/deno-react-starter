@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
+import { boolean, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 
 export const countries = pgTable("countries", {
   id: uuid("id").defaultRandom().primaryKey(),
@@ -13,6 +13,7 @@ export const tools = pgTable("tools", {
   name: text("name").notNull(),
   description: text("description"),
   url: text("url").notNull(),
+  isGreatCountry: boolean("is_great_country").notNull().default(false),
   createdAt: timestamp("created_at").notNull().defaultNow(),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });

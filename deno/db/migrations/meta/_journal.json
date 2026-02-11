@@ -15,6 +15,13 @@
       "when": 1770723655826,
       "tag": "0001_calm_preak",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1770807523659,
+      "tag": "0002_legal_iron_fist",
+      "breakpoints": true
     }
   ]
 }
